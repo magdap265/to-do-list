@@ -1,15 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 
-class Item extends React.Component {
-    render (){
-        return(
-            <div>
-                <p>{'Make a dinner'}</p>
-            </div>
-        )
-    }
+
+const Item = (props) => {
+    return(
+        <div>
+            <ul>
+                <li>
+                    {props.item}
+                </li>
+            </ul>
+        </div>
+    )
 }
 
 export default Item;

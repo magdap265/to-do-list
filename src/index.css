@@ -1,5 +1,7 @@
 body {
-  margin: 0;
+  background: url(cork-board/cork-board.png); /* Made by Lopez Théo (from https://www.toptal.com/designers/subtlepatterns/cork-board-pattern/)*/
+  color: #333333;
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -7,7 +9,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 20%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+h2{
+  margin-top: 20px;
+  color: indianred;
+  text-align: center;
 }
