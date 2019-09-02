@@ -8,9 +8,7 @@ class App extends React.Component{
     render (){
         return(
             <div className = "container">
-                <h2>TO DO LIST</h2>
-
-                <List/>
+                <List title = "♥ TO DO LIST ♥"/>
             </div>
             
         )

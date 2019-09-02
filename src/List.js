@@ -5,19 +5,25 @@ import AddNewItem from './AddNewItem';
 
 class List extends React.Component{
     state = {
-        item1: 'Make a dinner',
-        item2: 'Go for  walk',
-        item3: 'Meet with friends'
+        tasks: ['Make a dinner',
+                'Go for  walk',
+                'Meet with friends']
     }
+
+    addTask = () =>{
+        const list = this.state.tasks
+        list.push(this.state.inputText)
+        this.setState({tasks: list})
+        console.log()
+    }
+
     render(){
         return(
             <div>
-                <Item item = {this.state.item1}/>
-                <Item item = {this.state.item2}/>
-                <Item item = {this.state.item3}/>
-                <AddNewItem/>
+                <h2>{this.props.title}</h2>
+                {this.state.tasks.map((task, index) => <Item item = {task} key={index}/>)}
+                <AddNewItem tasks={this.state.tasks} addTask={this.addTask}/>
             </div>
-            
         )
     }
 }
