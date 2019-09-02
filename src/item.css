@@ -1,0 +1,9 @@
+.doneTask{
+    text-decoration: line-through;
+    color: darkgreen;
+}
+
+p {
+    cursor: pointer;
+
+}

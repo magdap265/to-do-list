@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from './Item';
 import AddNewItem from './AddNewItem';
+import './item.css'
 
 
 class List extends React.Component{
@@ -8,7 +9,8 @@ class List extends React.Component{
         tasks: ['Make a dinner',
                 'Go for  walk',
                 'Meet with friends'],
-        inputText: ''
+        inputText: '',
+        done: false
     }
 
     updateInputText = (event) => {
@@ -24,14 +26,25 @@ class List extends React.Component{
                 inputText: ''
             })
         }
-        console.log(this.state.inputText)
+    }
+
+    doneTask = () => {
+        this.setState({done: !this.state.done})
+        console.log(this.state.done)
     }
 
     render(){
         return(
             <div>
                 <h2>{this.props.title}</h2>
-                {this.state.tasks.map((task, index) => <Item item = {task} key={index}/>)}
+                {this.state.tasks.map((task, index) => 
+                    <Item 
+                        item={task} 
+                        key={index} 
+                        doneTask={this.doneTask}
+                        done={this.state.done}
+                    />
+                )}
                 <AddNewItem tasks={this.state.tasks} 
                             inputText={this.state.inputText} 
                             addTask={this.addTask} 

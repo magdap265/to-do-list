@@ -9,7 +9,10 @@ class Item extends React.Component {
             <div>
                 <ul>
                     <li>
-                        {this.props.item}
+                        <p  className={this.props.done ? 'doneTask' : ''} 
+                            onClick={this.props.doneTask}>
+                                {this.props.item}
+                        </p>
                     </li>
                 </ul>
             </div>
