@@ -1,9 +1,25 @@
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.edit-list{
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+}
+
 .doneTask{
     text-decoration: line-through;
     color: darkgreen;
 }
 
-p {
-    cursor: pointer;
-
+.item{
+    flex-basis: 70%;
+    text-align: left;
 }
